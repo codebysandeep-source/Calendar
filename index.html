@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--Sandeep Kr Chauhan-->
+<html>
+    <head>
+        <title>SanPage</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <div class="calendar">
+        <div id="month"></div>
+        <div id="day"></div>
+        <div id="number"></div>
+        <div id="year"></div>
+    </div>
+        
+        <script>
+            let san= new Date();
+            const lang= navigator.language;
+            document.getElementById("month").innerHTML=san.toLocaleString(lang, {month: 'long'});
+            
+document.getElementById("day").innerHTML=san.toLocaleString(lang, {weekday: 'long'});
+
+document.getElementById("number").innerHTML=san.getDate();
+
+document.getElementById("year").innerHTML=san.getFullYear();
+        </script>
+    </body>
+</html>
